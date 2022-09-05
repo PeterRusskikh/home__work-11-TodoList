@@ -47,7 +47,7 @@ addTodoButton.addEventListener('click', function (event) {
 
 function displayTodos() {
     let displayTodo = '';
-
+    localStorage.setItem('todos', JSON.stringify(todoList))
     if (todoList.length == 0) {
         todo.innerHTML = '<h2> All Todos Done</h2>';
         return;
@@ -77,7 +77,7 @@ function displayTodos() {
 
     todo.innerHTML = displayTodo;
 
-    localStorage.setItem('todos', JSON.stringify(todoList))
+
 }
 
 function deleteTodo(index) {
